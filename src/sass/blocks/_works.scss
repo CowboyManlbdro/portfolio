@@ -1,0 +1,93 @@
+.works {
+    .container {
+        position: relative;
+    }
+    &__link {
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+    }
+    &__backbtn {
+        width: 75px;
+        border: none;
+        display: none;
+        // position: sticky;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        // transform: translateY(-50%);
+        border-radius: 100%;
+        z-index: 2;
+        &:hover {
+            box-shadow: 0 0 15px 5px $second-color;
+        }
+    }
+    &__item {
+        display: none;
+        padding-top: 120px;
+        &-descr {
+            text-align: justify;
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-link-title {
+            margin-top: 25px;
+            text-align: center;
+        }
+        &-link {
+            &:hover {
+                text-decoration: none;
+                svg {
+                    fill: $second-color;
+                }
+            }
+        }
+        &-img {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            img {
+                width: 350px;
+            }
+        }
+        .adaptive {
+            display: flex;
+            justify-content: center;
+            video {
+                width: unset;
+            }
+        }
+        &-screen {
+            &-pause {
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+
+                display: block;
+                font-size: 18px;
+                text-align: center;
+                color: $second-color;
+            }
+            position: relative;
+            margin-top: 20px;
+            img {
+                width: 100%;
+            }
+            video {
+                width: 100%;
+                opacity: 0.75;
+                cursor: pointer;
+
+                // border: 2px solid transparent;
+                &:hover {
+                    box-shadow: 0 0 15px 5px $second-color;
+                }
+            }
+        }
+    }
+
+}
